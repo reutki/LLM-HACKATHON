@@ -2,17 +2,10 @@ import os
 from TTS.api import TTS
 
 # Paths to all sample audios
-sample_audio_paths = [
-    "videos/sample-1.mp3",
-    "videos/sample-2.mp3",
-    "videos/sample-3.mp3",
-    "videos/sample-4.mp3",
-    "videos/sample-5.mp3"
-]
-# Path to the passphrase text
+sample_audio_paths = "videos/audio_joined.mp3",
+
 passphrase_path = "passphrase.txt"
-# Output path for the generated audio
-output_audio_path = "passphrase.mp3"
+output_audio_path = "passphrase_joined.mp3"
 
 # Read the passphrase
 with open(passphrase_path, "r") as f:
@@ -32,15 +25,7 @@ else:
 
 print("Available models:", available_models)
 # Pick a multi-speaker or voice cloning model (e.g., "tts_models/multilingual/multi-dataset/your_tts")
-model_name = None
-for m in available_models:
-    if "your_tts" in m or "vits" in m or "voice" in m:
-        model_name = m
-        break
-if model_name is None and available_models:
-    model_name = available_models[0]  # fallback
-elif model_name is None:
-    model_name = "tts_models/multilingual/multi-dataset/your_tts"  # hardcoded fallback
+model_name = "tts_models/multilingual/multi-dataset/xtts_v2"  # hardcoded fallback
 
 # Initialize TTS
 tts = TTS(model_name)
