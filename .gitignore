@@ -69,5 +69,3 @@ dmypy.json
 # dotenv
 *.env
 
-# Markdown files
-*.md
