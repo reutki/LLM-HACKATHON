@@ -15,6 +15,7 @@ Prompt engineering is the art and science of designing effective prompts for lar
 
 ### What is Prompt Engineering?
 
+Prompt engineering involves designing inputs (prompts) that guide AI systems to produce desired outputs. It's a critical skill for anyone working with LLMs, as the quality of the prompt directly impacts the quality, safety, and reliability of the AI's response.
 
 **Key Concepts:**
 
